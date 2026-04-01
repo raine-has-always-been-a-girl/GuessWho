@@ -1,7 +1,110 @@
 <html>
-<body>
-    <div style="display:flex; justify-content:center; align-items:center">
-        <img src="https://preview.redd.it/the-original-characters-from-guess-who-board-game-v0-89fe4thrfi2e1.jpeg?width=1080&crop=smart&auto=webp&s=dbe512d13ee869b0532b329c465c780a99e96ea5" alt="character atlas">
-    </div>
-</body>
+    <style>
+        :root {
+            --Alex: true;
+            --Alfred: true;
+            --Anita: true;
+            --Anne: true;
+            --Bernard: true;
+            --Bill: true;
+            --Charles: true;
+            --Claire: true;
+
+            --David: true;
+            --Eric: true;
+            --Frans: true;
+            --George: true;
+            --Herman: true;
+            --Joe: true;
+            --Maria: true;
+            --Max: true;
+
+            --Paul: true;
+            --Peter: true;
+            --Philip: true;
+            --Richard: true;
+            --Robert: true;
+            --Sam: true;
+            --Susan: true;
+            --Tom: true;
+        }
+        
+    </style>
+
+    <script>
+        function toggle(character) {
+            document.querySelector(':root').style.setProperty('--' + character, !JSON.parse(getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + character)));
+
+            if (getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + character).trim() === 'false') {
+                document.querySelector('img[alt="' + character + ' big red x"]').style.visibility = 'visible';
+            } else {
+                document.querySelector('img[alt="' + character + ' big red x"]').style.visibility = 'hidden';
+            }
+        }
+    </script>
+
+    <body>
+        <div style="display:flex; justify-content:center; align-items:center; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            
+            <img src="https://preview.redd.it/the-original-characters-from-guess-who-board-game-v0-89fe4thrfi2e1.jpeg?width=1080&crop=smart&auto=webp&s=dbe512d13ee869b0532b329c465c780a99e96ea5" alt="character atlas" usemap="#character-map">
+
+            <map name="character-map">
+                <!-- Row 1 -->
+                <area shape="rect" coords="75,0,191,202"        alt="Alex"      onclick="toggle('Alex')">
+                <area shape="rect" coords="191,0,308,202"       alt="Alfred"    onclick="toggle('Alfred')">
+                <area shape="rect" coords="308,0,424,202"       alt="Anita"     onclick="toggle('Anita')">
+                <area shape="rect" coords="424,0,540,202"       alt="Anne"      onclick="toggle('Anne')">
+                <area shape="rect" coords="540,0,656,202"       alt="Bernard"   onclick="toggle('Bernard')">
+                <area shape="rect" coords="656,0,773,202"       alt="Bill"      onclick="toggle('Bill')">
+                <area shape="rect" coords="773,0,889,202"       alt="Charles"   onclick="toggle('Charles')">
+                <area shape="rect" coords="889,0,1005,202"      alt="Claire"    onclick="toggle('Claire')">
+                <!-- Row 2 -->
+                <area shape="rect" coords="75,202,191,404"      alt="David"     onclick="toggle('David')">
+                <area shape="rect" coords="191,202,308,404"     alt="Eric"      onclick="toggle('Eric')">
+                <area shape="rect" coords="308,202,424,404"     alt="Frans"     onclick="toggle('Frans')">
+                <area shape="rect" coords="424,202,540,404"     alt="George"    onclick="toggle('George')">
+                <area shape="rect" coords="540,202,656,404"     alt="Herman"    onclick="toggle('Herman')">
+                <area shape="rect" coords="656,202,773,404"     alt="Joe"       onclick="toggle('Joe')">
+                <area shape="rect" coords="773,202,889,404"     alt="Maria"     onclick="toggle('Maria')">
+                <area shape="rect" coords="889,202,1005,404"    alt="Max"       onclick="toggle('Max')">
+                <!-- Row 3 -->
+                <area shape="rect" coords="75,404,191,607"      alt="Paul"      onclick="toggle('Paul')">
+                <area shape="rect" coords="191,404,308,607"     alt="Peter"     onclick="toggle('Peter')">
+                <area shape="rect" coords="308,404,424,607"     alt="Philip"    onclick="toggle('Philip')">
+                <area shape="rect" coords="424,404,540,607"     alt="Richard"   onclick="toggle('Richard')">
+                <area shape="rect" coords="540,404,656,607"     alt="Robert"    onclick="toggle('Robert')">
+                <area shape="rect" coords="656,404,773,607"     alt="Sam"       onclick="toggle('Sam')">
+                <area shape="rect" coords="773,404,889,607"     alt="Susan"     onclick="toggle('Susan')">
+                <area shape="rect" coords="889,404,1005,607"    alt="Tom"       onclick="toggle('Tom')" >
+            </map>
+
+            <!-- Row 1 X's -->
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 75px; top: 40px;"     alt="Alex big red x"    onclick="toggle('Alex')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 191px; top: 40px;"    alt="Alfred big red x"  onclick="toggle('Alfred')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 308px; top: 40px;"    alt="Anita big red x"   onclick="toggle('Anita')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 424px; top: 40px;"    alt="Anne big red x"    onclick="toggle('Anne')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 540px; top: 40px;"    alt="Bernard big red x" onclick="toggle('Bernard')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 656px; top: 40px;"    alt="Bill big red x"    onclick="toggle('Bill')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 773px; top: 40px;"    alt="Charles big red x" onclick="toggle('Charles')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 889px; top: 40px;"    alt="Claire big red x"  onclick="toggle('Claire')">
+            <!-- Row 2 X's -->
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 75px; top: 242px;"    alt="David big red x"   onclick="toggle('David')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 191px; top: 242px;"   alt="Eric big red x"    onclick="toggle('Eric')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 308px; top: 242px;"   alt="Frans big red x"   onclick="toggle('Frans')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 424px; top: 242px;"   alt="George big red x"  onclick="toggle('George')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 540px; top: 242px;"   alt="Herman big red x"  onclick="toggle('Herman')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 656px; top: 242px;"   alt="Joe big red x"     onclick="toggle('Joe')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 773px; top: 242px;"   alt="Maria big red x"   onclick="toggle('Maria')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 889px; top: 242px;"   alt="Max big red x"     onclick="toggle('Max')">
+            <!-- Row 3 X's -->
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 75px; bottom: 40px;"  alt="Paul big red x"    onclick="toggle('Paul')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 191px; bottom: 40px;" alt="Peter big red x"   onclick="toggle('Peter')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 308px; bottom: 40px;" alt="Philip big red x"  onclick="toggle('Philip')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 424px; bottom: 40px;" alt="Richard big red x" onclick="toggle('Richard')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 540px; bottom: 40px;" alt="Robert big red x"  onclick="toggle('Robert')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 656px; bottom: 40px;" alt="Sam big red x"     onclick="toggle('Sam')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 773px; bottom: 40px;" alt="Susan big red x"   onclick="toggle('Susan')">
+            <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" width="115" height="115" style="display: inline; visibility: hidden; position: absolute; left: 889px; bottom: 40px;" alt="Tom big red x"     onclick="toggle('Tom')">    
+        </div>
+    </body>
 </html>
