@@ -1,0 +1,182 @@
+<html>
+    <style>
+        :root {
+            /* Bachelors */
+            --Alex: true;
+            --Elliott: true;
+            --Harvey: true;
+            --Sam: true;
+            --Sebastian: true;
+            --Shane: true;
+
+            /* Bachelorettes */
+            --Abigail: true;
+            --Emily: true;
+            --Haley: true;
+            --Leah: true;
+            --Maru: true;
+            --Penny: true;
+
+            /* other */
+            --Caroline: true;
+            --Clint: true;
+            --Demetrius: true;
+            --Jodi: true;
+            --Krobus: true;
+            --Lewis: true;
+            --Linus: true;
+            --Marnie: true;
+            --Pierre: true;
+            --Robin: true;
+            --Willy: true;
+            --Wizard: true;
+        }
+        
+        .BigRedX {
+            width: 128px;
+            height: 128px;
+            display: inline;
+            visibility: hidden;
+            position: absolute;
+            transform: translate(0px, -128px);
+        }
+        
+    </style>
+
+    <script>
+        function toggle(character) {
+            document.querySelector(':root').style.setProperty('--' + character, !JSON.parse(getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + character)));
+
+            if (getComputedStyle(document.querySelector(':root')).getPropertyValue('--' + character).trim() === 'false') {
+                document.querySelector('img[alt="' + character + ' big red x"]').style.visibility = 'visible';
+            } else {
+                document.querySelector('img[alt="' + character + ' big red x"]').style.visibility = 'hidden';
+            }
+        }
+    </script>
+
+    <body>
+        <div style="display: grid; grid-template: repeat(3, auto) / repeat(8, auto); justify-content: center; align-items: center; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/0/04/Alex.png"         style="display: block; position: relative;" alt="Alex"      onclick="toggle('Alex')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Alex big red x"         onclick="toggle('Alex')">
+                <p>Alex</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/b/bd/Elliott.png"      style="display: block; position: relative;" alt="Elliott"   onclick="toggle('Elliott')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Elliott big red x"      onclick="toggle('Elliott')">
+                <p>Elliott</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/9/95/Harvey.png"       style="display: block; position: relative;" alt="Harvey"    onclick="toggle('Harvey')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Harvey big red x"       onclick="toggle('Harvey')">
+                <p>Harvey</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/9/94/Sam.png"          style="display: block; position: relative;" alt="Sam"       onclick="toggle('Sam')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Sam big red x"          onclick="toggle('Sam')">
+                <p>Sam</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/a/a8/Sebastian.png"    style="display: block; position: relative;" alt="Sebastian" onclick="toggle('Sebastian')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Sebastian big red x"    onclick="toggle('Sebastian')">
+                <p>Sebastian</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/8/8b/Shane.png"        style="display: block; position: relative;" alt="Shane"     onclick="toggle('Shane')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Shane big red x"        onclick="toggle('Shane')">
+                <p>Shane</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png"      style="display: block; position: relative;" alt="Abigail"   onclick="toggle('Abigail')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Abigail big red x"      onclick="toggle('Abigail')">
+                <p>Abigail</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/2/28/Emily.png"        style="display: block; position: relative;" alt="Emily"     onclick="toggle('Emily')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Emily big red x"        onclick="toggle('Emily')">
+                <p>Emily</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/1/1b/Haley.png"        style="display: block; position: relative;" alt="Haley"     onclick="toggle('Haley')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Haley big red x"        onclick="toggle('Haley')">
+                <p>Haley</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/e/e6/Leah.png"         style="display: block; position: relative;" alt="Leah"      onclick="toggle('Leah')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Leah big red x"         onclick="toggle('Leah')">
+                <p>Leah</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/f/f8/Maru.png"         style="display: block; position: relative;" alt="Maru"      onclick="toggle('Maru')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Maru big red x"         onclick="toggle('Maru')">
+                <p>Maru</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/a/ab/Penny.png"        style="display: block; position: relative;" alt="Penny"     onclick="toggle('Penny')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Penny big red x"        onclick="toggle('Penny')">
+                <p>Penny</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"     style="display: block; position: relative;" alt="Caroline"  onclick="toggle('Caroline')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Caroline big red x"     onclick="toggle('Caroline')">
+                <p>Caroline</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/3/31/Clint.png"        style="display: block; position: relative;" alt="Clint"     onclick="toggle('Clint')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Clint big red x"        onclick="toggle('Clint')">
+                <p>Clint</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"    style="display: block; position: relative;" alt="Demetrius" onclick="toggle('Demetrius')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Demetrius big red x"    onclick="toggle('Demetrius')">
+                <p>Demetrius</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/4/41/Jodi.png"         style="display: block; position: relative;" alt="Jodi"      onclick="toggle('Jodi')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Jodi big red x"         onclick="toggle('Jodi')">
+                <p>Jodi</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/7/71/Krobus.png"       style="display: block; position: relative;" alt="Krobus"    onclick="toggle('Krobus')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Krobus big red x"       onclick="toggle('Krobus')">
+                <p>Krobus</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/2/2b/Lewis.png"        style="display: block; position: relative;" alt="Lewis"     onclick="toggle('Lewis')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Lewis big red x"        onclick="toggle('Lewis')">
+                <p>Lewis</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/3/31/Linus.png"        style="display: block; position: relative;" alt="Linus"     onclick="toggle('Linus')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Linus big red x"        onclick="toggle('Linus')">
+                <p>Linus</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/5/52/Marnie.png"       style="display: block; position: relative;" alt="Marnie"    onclick="toggle('Marnie')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Marnie big red x"       onclick="toggle('Marnie')">
+                <p>Marnie</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/7/7e/Pierre.png"       style="display: block; position: relative;" alt="Pierre"    onclick="toggle('Pierre')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Pierre big red x"       onclick="toggle('Pierre')">
+                <p>Pierre</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/1/1b/Robin.png"        style="display: block; position: relative;" alt="Robin"     onclick="toggle('Robin')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Robin big red x"        onclick="toggle('Robin')">
+                <p>Robin</p>
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/8/82/Willy.png"        style="display: block; position: relative;" alt="Willy"     onclick="toggle('Willy')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Willy big red x"        onclick="toggle('Willy')">
+                <p>Willy</p>   
+            </div>
+            <div>
+                <img src="https://stardewvalleywiki.com/mediawiki/images/c/c7/Wizard.png"       style="display: block; position: relative;" alt="Wizard"    onclick="toggle('Wizard')">
+                <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Wizard big red x"       onclick="toggle('Wizard')">
+                <p>Wizard</p>
+            </div>
+        </div>
+    </body>
+</html>
