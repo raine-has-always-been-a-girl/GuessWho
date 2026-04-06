@@ -33,12 +33,28 @@
         }
         
         .BigRedX {
-            width: 128px;
-            height: 128px;
+            width: 12.5vw;
             display: inline;
             visibility: hidden;
             position: absolute;
-            transform: translate(0px, -128px);
+            top: 0%;
+        }
+
+        .CharacterGrid {
+            display: grid;
+            grid-template: repeat(3, auto) / repeat(8, 12.5vw);
+            place-content: center center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .CharacterGrid div{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            place-content: center center;
+            position: relative;
         }
         
     </style>
@@ -56,7 +72,7 @@
     </script>
 
     <body>
-        <div style="display: grid; grid-template: repeat(3, auto) / repeat(8, auto); justify-content: center; align-items: center; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="CharacterGrid">
             <div>
                 <img src="https://stardewvalleywiki.com/mediawiki/images/0/04/Alex.png"         style="display: block; position: relative;" alt="Alex"      onclick="toggle('Alex')">
                 <img src="https://www.clker.com/cliparts/Z/u/b/a/j/i/big-red-x-hi.png" class="BigRedX" alt="Alex big red x"         onclick="toggle('Alex')">
